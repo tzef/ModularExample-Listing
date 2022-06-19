@@ -26,8 +26,6 @@
 		C9A78675283D9D8900D9177B /* GithubSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78674283D9D8900D9177B /* GithubSearchModel.swift */; };
 		C9A78678283D9DC600D9177B /* SearchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78677283D9DC600D9177B /* SearchStatus.swift */; };
 		C9A7874E2854D80800D9177B /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7874D2854D80800D9177B /* UITableViewCell+ReuseIdentifier.swift */; };
-		C9A7877A2854DC2B00D9177B /* ModuleDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A787792854DC2B00D9177B /* ModuleDesignSystem.framework */; };
-		C9A7877B2854DC2B00D9177B /* ModuleDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9A787792854DC2B00D9177B /* ModuleDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9A7879A28551A9100D9177B /* GithubSearchRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7879928551A9100D9177B /* GithubSearchRespository.swift */; };
 		C9A7879C28551B5200D9177B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7879B28551B5200D9177B /* APIRequest.swift */; };
 		C9A7879E28551B6E00D9177B /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7879D28551B6E00D9177B /* APIResource.swift */; };
@@ -40,21 +38,8 @@
 		C9A787BF2855246D00D9177B /* RepositoryListViewModelStatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787BE2855246D00D9177B /* RepositoryListViewModelStatusMapper.swift */; };
 		C9A787C12855248400D9177B /* ListingSearchStatusMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787C02855248400D9177B /* ListingSearchStatusMapper.swift */; };
 		C9A787C32855268D00D9177B /* ListingItemDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A787C22855268D00D9177B /* ListingItemDisplaying.swift */; };
+		C9A787D8285ED90300D9177B /* ModuleDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = C9A787D7285ED90300D9177B /* ModuleDesignSystem */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C9A7877C2854DC2C00D9177B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C9A7877B2854DC2B00D9177B /* ModuleDesignSystem.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C9A78519283A53B400D9177B /* ModuleListing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModuleListing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A7877A2854DC2B00D9177B /* ModuleDesignSystem.framework in Frameworks */,
+				C9A787D8285ED90300D9177B /* ModuleDesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +128,8 @@
 				C9A7851C283A53B400D9177B /* ModuleListing.h */,
 				C9A7851D283A53B400D9177B /* ModuleListing.docc */,
 			);
-			path = ModuleListing;
+			name = ModuleListing;
+			path = Sources/ModuleListing;
 			sourceTree = "<group>";
 		};
 		C9A78525283A54F300D9177B /* RepositoryListing */ = {
@@ -305,13 +291,15 @@
 				C9A78515283A53B400D9177B /* Sources */,
 				C9A78516283A53B400D9177B /* Frameworks */,
 				C9A78517283A53B400D9177B /* Resources */,
-				C9A7877C2854DC2C00D9177B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ModuleListing;
+			packageProductDependencies = (
+				C9A787D7285ED90300D9177B /* ModuleDesignSystem */,
+			);
 			productName = ModuleListing;
 			productReference = C9A78519283A53B400D9177B /* ModuleListing.framework */;
 			productType = "com.apple.product-type.framework";
@@ -339,6 +327,9 @@
 				Base,
 			);
 			mainGroup = C9A7850F283A53B400D9177B;
+			packageReferences = (
+				C9A787D6285ED90300D9177B /* XCRemoteSwiftPackageReference "ModularExample-DesignSystem" */,
+			);
 			productRefGroup = C9A7851A283A53B400D9177B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -597,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9A787D6285ED90300D9177B /* XCRemoteSwiftPackageReference "ModularExample-DesignSystem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tzef/ModularExample-DesignSystem.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9A787D7285ED90300D9177B /* ModuleDesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9A787D6285ED90300D9177B /* XCRemoteSwiftPackageReference "ModularExample-DesignSystem" */;
+			productName = ModuleDesignSystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9A78510283A53B400D9177B /* Project object */;
 }

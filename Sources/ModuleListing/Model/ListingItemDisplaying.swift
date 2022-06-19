@@ -3,6 +3,8 @@
 //  ModuleListing
 //
 
+import Foundation
+
 public protocol ListingItemDisplaying {
     var id: Int { get }
     var name: String { get }

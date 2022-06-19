@@ -3,6 +3,8 @@
 //  ModuleListing
 //
 
+import Foundation
+
 struct GithubSearchModel {
     var total: Int
     var items: [Item]

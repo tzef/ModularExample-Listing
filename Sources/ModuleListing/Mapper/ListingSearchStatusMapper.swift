@@ -3,8 +3,6 @@
 //  ModuleListing
 //
 
-import ModuleUI
-
 final class ListingSearchStatusMapper: RepositoryListViewModelStatusMapper {
     func toRefreshControllerIsRefreshing(
         from status: SearchStatus

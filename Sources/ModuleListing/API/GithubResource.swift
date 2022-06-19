@@ -3,6 +3,8 @@
 //  ModuleListing
 //
 
+import Foundation
+
 enum GithubResource: APIResource {
     static let perPage = 30
     case search(keyword: String, page: Int)

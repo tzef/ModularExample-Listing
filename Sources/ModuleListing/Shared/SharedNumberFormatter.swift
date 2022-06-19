@@ -3,6 +3,8 @@
 //  ModuleListing
 //
 
+import Foundation
+
 final class SharedNumberFormatter {
     static let shared = SharedNumberFormatter()
     private init() {}
